@@ -5,96 +5,96 @@ FIO CHAR(20) NOT NULL
 ALTER TABLE Test
 ADD AGE INT NOT NULL
 DROP TABLE Test
-CREATE TABLE Цвет(
+CREATE TABLE Р¦РІРµС‚(
 ID_colour BIGINT NOT NULL PRIMARY KEY,
 colour CHAR(100) NOT NULL
 )
-CREATE TABLE Марка_автомобиля(
+CREATE TABLE РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(
 ID_M BIGINT NOT NULL PRIMARY KEY,
-Марка char(100) NOT NULL
+РњР°СЂРєР° char(100) NOT NULL
 )
-CREATE TABLE Тип_двигателя(
+CREATE TABLE РўРёРї_РґРІРёРіР°С‚РµР»СЏ(
 ID_engine BIGINT NOT NULL PRIMARY KEY,
-Тип_двигателя CHAR(100) NOT NULL
+РўРёРї_РґРІРёРіР°С‚РµР»СЏ CHAR(100) NOT NULL
 )
-CREATE TABLE Привод(
-ID_привод BIGINT NOT NULL PRIMARY KEY,
-Привод CHAR(100) NOT NULL
+CREATE TABLE РџСЂРёРІРѕРґ(
+ID_РїСЂРёРІРѕРґ BIGINT NOT NULL PRIMARY KEY,
+РџСЂРёРІРѕРґ CHAR(100) NOT NULL
 )
-CREATE TABLE Тип_КПП(
-ID_КПП BIGINT NOT NULL PRIMARY KEY,
-КПП CHAR(100) NOT NULL
+CREATE TABLE РўРёРї_РљРџРџ(
+ID_РљРџРџ BIGINT NOT NULL PRIMARY KEY,
+РљРџРџ CHAR(100) NOT NULL
 )
-CREATE TABLE Тех_характеристики_автомобиля(
-ID_характеристики BIGINT NOT NULL PRIMARY KEY,
-Год BIGINT NOT NULL,
-Масса BIGINT NOT NULL,
-Объём_двигателя FLOAT NOT NULL,
-Мощность FLOAT NOT NULL,
-Пробег BIGINT NOT NULL,
-Цена MONEY NOT NULL,
+CREATE TABLE РўРµС…_С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё_Р°РІС‚РѕРјРѕР±РёР»СЏ(
+ID_С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё BIGINT NOT NULL PRIMARY KEY,
+Р“РѕРґ BIGINT NOT NULL,
+РњР°СЃСЃР° BIGINT NOT NULL,
+РћР±СЉС‘Рј_РґРІРёРіР°С‚РµР»СЏ FLOAT NOT NULL,
+РњРѕС‰РЅРѕСЃС‚СЊ FLOAT NOT NULL,
+РџСЂРѕР±РµРі BIGINT NOT NULL,
+Р¦РµРЅР° MONEY NOT NULL,
 ID_colour BIGINT NOT NULL,
-ID_привод BIGINT NOT NULL,
+ID_РїСЂРёРІРѕРґ BIGINT NOT NULL,
 ID_M BIGINT NOT NULL,
 ID_engine BIGINT NOT NULL,
-ID_КПП BIGINT NOT NULL
+ID_РљРџРџ BIGINT NOT NULL
 )
-CREATE TABLE Страны(
+CREATE TABLE РЎС‚СЂР°РЅС‹(
 ID_C BIGINT NOT NULL PRIMARY KEY,
-Страна CHAR(100) NOT NULL
+РЎС‚СЂР°РЅР° CHAR(100) NOT NULL
 )
-CREATE TABLE Тех_состояние(
+CREATE TABLE РўРµС…_СЃРѕСЃС‚РѕСЏРЅРёРµ(
 ID_condition BIGINT NOT NULL PRIMARY KEY,
-Состояние CHAR(100) NOT NULL
+РЎРѕСЃС‚РѕСЏРЅРёРµ CHAR(100) NOT NULL
 )
-CREATE TABLE ПТС(
-ID_ПТС BIGINT NOT NULL PRIMARY KEY,
-ПТС CHAR(100) NOT NULL
+CREATE TABLE РџРўРЎ(
+ID_РџРўРЎ BIGINT NOT NULL PRIMARY KEY,
+РџРўРЎ CHAR(100) NOT NULL
 )
-CREATE TABLE Автомобиль(
-ID_автомобиля BIGINT NOT NULL PRIMARY KEY,
+CREATE TABLE РђРІС‚РѕРјРѕР±РёР»СЊ(
+ID_Р°РІС‚РѕРјРѕР±РёР»СЏ BIGINT NOT NULL PRIMARY KEY,
 vin CHAR(100) NOT NULL,
-гос_регистр_номер CHAR(100) NOT NULL,
-Владельцев_по_ПТС BIGINT,
+РіРѕСЃ_СЂРµРіРёСЃС‚СЂ_РЅРѕРјРµСЂ CHAR(100) NOT NULL,
+Р’Р»Р°РґРµР»СЊС†РµРІ_РїРѕ_РџРўРЎ BIGINT,
 ID_C BIGINT NOT NULL,
 ID_condition BIGINT NOT NULL,
-ID_ПТС BIGINT NOT NULL,
+ID_РџРўРЎ BIGINT NOT NULL,
 ID_M BIGINT NOT NULL,
-ID_характеристики BIGINT NOT NULL
+ID_С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё BIGINT NOT NULL
 )
-CREATE TABLE Клиент(
+CREATE TABLE РљР»РёРµРЅС‚(
 ID_Client BIGINT NOT NULL PRIMARY KEY,
-Фамилия CHAR(100) NOT NULL,
-Имя CHAR(100) NOT NULL,
-Отчество CHAR(100) NOT NULL
+Р¤Р°РјРёР»РёСЏ CHAR(100) NOT NULL,
+РРјСЏ CHAR(100) NOT NULL,
+РћС‚С‡РµСЃС‚РІРѕ CHAR(100) NOT NULL
 )
-CREATE TABLE Вид_оплаты(
-ID_Оплаты BIGINT NOT NULL PRIMARY KEY,
-Вид_оплаты CHAR(100) NOT NULL
+CREATE TABLE Р’РёРґ_РѕРїР»Р°С‚С‹(
+ID_РћРїР»Р°С‚С‹ BIGINT NOT NULL PRIMARY KEY,
+Р’РёРґ_РѕРїР»Р°С‚С‹ CHAR(100) NOT NULL
 )
-CREATE TABLE Договор(
-ID_договор  BIGINT NOT NULL PRIMARY KEY,
-Цена MONEY NOT NULL,
-Гарантия BIGINT NOT NULL,
-НДС MONEY NOT NULL,
-ID_condition BIGINT NOT NULL FOREIGN KEY REFERENCES Тех_состояние(ID_condition),
-ID_ПТС BIGINT NOT NULL FOREIGN KEY REFERENCES ПТС(ID_ПТС),
-ID_M BIGINT NOT NULL FOREIGN KEY REFERENCES Марка_автомобиля(ID_M),
-ID_Client BIGINT NOT NULL FOREIGN KEY REFERENCES Клиент (ID_Client),
-ID_Оплаты BIGINT NOT NULL FOREIGN KEY REFERENCES Вид_Оплаты (ID_Оплаты),
-ID_характеристики BIGINT NOT NULL FOREIGN KEY REFERENCES Тех_характеристики_автомобиля (ID_характеристики),
-ID_автомобиля BIGINT NOT NULL FOREIGN KEY REFERENCES Автомобиль (ID_автомобиля)
+CREATE TABLE Р”РѕРіРѕРІРѕСЂ(
+ID_РґРѕРіРѕРІРѕСЂ  BIGINT NOT NULL PRIMARY KEY,
+Р¦РµРЅР° MONEY NOT NULL,
+Р“Р°СЂР°РЅС‚РёСЏ BIGINT NOT NULL,
+РќР”РЎ MONEY NOT NULL,
+ID_condition BIGINT NOT NULL FOREIGN KEY REFERENCES РўРµС…_СЃРѕСЃС‚РѕСЏРЅРёРµ(ID_condition),
+ID_РџРўРЎ BIGINT NOT NULL FOREIGN KEY REFERENCES РџРўРЎ(ID_РџРўРЎ),
+ID_M BIGINT NOT NULL FOREIGN KEY REFERENCES РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(ID_M),
+ID_Client BIGINT NOT NULL FOREIGN KEY REFERENCES РљР»РёРµРЅС‚ (ID_Client),
+ID_РћРїР»Р°С‚С‹ BIGINT NOT NULL FOREIGN KEY REFERENCES Р’РёРґ_РћРїР»Р°С‚С‹ (ID_РћРїР»Р°С‚С‹),
+ID_С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё BIGINT NOT NULL FOREIGN KEY REFERENCES РўРµС…_С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё_Р°РІС‚РѕРјРѕР±РёР»СЏ (ID_С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё),
+ID_Р°РІС‚РѕРјРѕР±РёР»СЏ BIGINT NOT NULL FOREIGN KEY REFERENCES РђРІС‚РѕРјРѕР±РёР»СЊ (ID_Р°РІС‚РѕРјРѕР±РёР»СЏ)
 )
-INSERT INTO Марка_автомобиля(ID_M,Марка) Values(1,'Renault');--Добавление записи
-INSERT INTO Марка_автомобиля(ID_M,Марка) Values(2,'Lada');
-INSERT INTO Марка_автомобиля(ID_M,Марка) Values(3,'Mercedes');
-INSERT INTO Марка_автомобиля(ID_M,Марка) Values(4,'BMW');
-UPDATE  Марка_автомобиля SET Марка='Renault_Logan' WHERE ID_M=1;
-UPDATE  Марка_автомобиля SET Марка='Lada_Granta' WHERE ID_M=2;
-DELETE FROM Марка_автомобиля WHERE ID_M=4;
-DELETE FROM Марка_автомобиля WHERE ID_M=3;
+INSERT INTO РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(ID_M,РњР°СЂРєР°) Values(1,'Renault');--Р”РѕР±Р°РІР»РµРЅРёРµ Р·Р°РїРёСЃРё
+INSERT INTO РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(ID_M,РњР°СЂРєР°) Values(2,'Lada');
+INSERT INTO РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(ID_M,РњР°СЂРєР°) Values(3,'Mercedes');
+INSERT INTO РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(ID_M,РњР°СЂРєР°) Values(4,'BMW');
+UPDATE  РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ SET РњР°СЂРєР°='Renault_Logan' WHERE ID_M=1;
+UPDATE  РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ SET РњР°СЂРєР°='Lada_Granta' WHERE ID_M=2;
+DELETE FROM РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ WHERE ID_M=4;
+DELETE FROM РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ WHERE ID_M=3;
 
-INSERT INTO Марка_автомобиля(ID_M,Марка) Values(3,'Mercedes');
-INSERT INTO Марка_автомобиля(ID_M,Марка) Values(4,'BMW');
-TRUNCATE TABLE Марка_автомобиля;
+INSERT INTO РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(ID_M,РњР°СЂРєР°) Values(3,'Mercedes');
+INSERT INTO РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ(ID_M,РњР°СЂРєР°) Values(4,'BMW');
+TRUNCATE TABLE РњР°СЂРєР°_Р°РІС‚РѕРјРѕР±РёР»СЏ;
 
