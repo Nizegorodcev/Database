@@ -1,93 +1,93 @@
-CREATE TABLE Ìàðêà_àâòîìîáèëÿ(
+CREATE TABLE ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(
 ID_M BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Ìàðêà char(100) NOT NULL
+ÐœÐ°Ñ€ÐºÐ° char(100) NOT NULL
 )
-CREATE TABLE Òèï_äâèãàòåëÿ(
+CREATE TABLE Ð¢Ð¸Ð¿_Ð´Ð²Ð¸Ð³Ð°Ñ‚ÐµÐ»Ñ(
 ID_engine BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Òèï_äâèãàòåëÿ CHAR(100) NOT NULL
+Ð¢Ð¸Ð¿_Ð´Ð²Ð¸Ð³Ð°Ñ‚ÐµÐ»Ñ CHAR(100) NOT NULL
 )
-CREATE TABLE Ïðèâîä(
-ID_ïðèâîä BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Ïðèâîä CHAR(100) NOT NULL
+CREATE TABLE ÐŸÑ€Ð¸Ð²Ð¾Ð´(
+ID_Ð¿Ñ€Ð¸Ð²Ð¾Ð´ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ÐŸÑ€Ð¸Ð²Ð¾Ð´ CHAR(100) NOT NULL
 )
-CREATE TABLE Òèï_ÊÏÏ(
-ID_ÊÏÏ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-ÊÏÏ CHAR(100) NOT NULL
+CREATE TABLE Ð¢Ð¸Ð¿_ÐšÐŸÐŸ(
+ID_ÐšÐŸÐŸ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ÐšÐŸÐŸ CHAR(100) NOT NULL
 )
-CREATE TABLE Òåõ_õàðàêòåðèñòèêè_àâòîìîáèëÿ(
-ID_õàðàêòåðèñòèêè BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Ãîä BIGINT NOT NULL,
-Ìàññà BIGINT NOT NULL,
-Îáú¸ì_äâèãàòåëÿ FLOAT NOT NULL,
-Ìîùíîñòü FLOAT NOT NULL,
-Ïðîáåã BIGINT NOT NULL,
-Öåíà MONEY NOT NULL,
+CREATE TABLE Ð¢ÐµÑ…_Ñ…Ð°Ñ€Ð°ÐºÑ‚ÐµÑ€Ð¸ÑÑ‚Ð¸ÐºÐ¸_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(
+ID_Ñ…Ð°Ñ€Ð°ÐºÑ‚ÐµÑ€Ð¸ÑÑ‚Ð¸ÐºÐ¸ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ð“Ð¾Ð´ BIGINT NOT NULL,
+ÐœÐ°ÑÑÐ° BIGINT NOT NULL,
+ÐžÐ±ÑŠÑ‘Ð¼_Ð´Ð²Ð¸Ð³Ð°Ñ‚ÐµÐ»Ñ FLOAT NOT NULL,
+ÐœÐ¾Ñ‰Ð½Ð¾ÑÑ‚ÑŒ FLOAT NOT NULL,
+ÐŸÑ€Ð¾Ð±ÐµÐ³ BIGINT NOT NULL,
+Ð¦ÐµÐ½Ð° MONEY NOT NULL,
 ID_colour BIGINT NOT NULL,
-ID_ïðèâîä BIGINT NOT NULL,
+ID_Ð¿Ñ€Ð¸Ð²Ð¾Ð´ BIGINT NOT NULL,
 ID_M BIGINT NOT NULL,
 ID_engine BIGINT NOT NULL,
-ID_ÊÏÏ BIGINT NOT NULL
+ID_ÐšÐŸÐŸ BIGINT NOT NULL
 )
-CREATE TABLE Ñòðàíû(
+CREATE TABLE Ð¡Ñ‚Ñ€Ð°Ð½Ñ‹(
 ID_C BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Ñòðàíà CHAR(100) NOT NULL
+Ð¡Ñ‚Ñ€Ð°Ð½Ð° CHAR(100) NOT NULL
 )
-CREATE TABLE Òåõ_ñîñòîÿíèå(
+CREATE TABLE Ð¢ÐµÑ…_ÑÐ¾ÑÑ‚Ð¾ÑÐ½Ð¸Ðµ(
 ID_condition BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Ñîñòîÿíèå CHAR(100) NOT NULL
+Ð¡Ð¾ÑÑ‚Ð¾ÑÐ½Ð¸Ðµ CHAR(100) NOT NULL
 )
-CREATE TABLE ÏÒÑ(
-ID_ÏÒÑ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-ÏÒÑ CHAR(100) NOT NULL
+CREATE TABLE ÐŸÐ¢Ð¡(
+ID_ÐŸÐ¢Ð¡ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
+ÐŸÐ¢Ð¡ CHAR(100) NOT NULL
 )
-CREATE TABLE Àâòîìîáèëü(
-ID_àâòîìîáèëÿ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
+CREATE TABLE ÐÐ²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»ÑŒ(
+ID_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
 vin CHAR(100) NOT NULL,
-ãîñ_ðåãèñòð_íîìåð CHAR(100) NOT NULL,
-Âëàäåëüöåâ_ïî_ÏÒÑ BIGINT,
+Ð³Ð¾Ñ_Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€_Ð½Ð¾Ð¼ÐµÑ€ CHAR(100) NOT NULL,
+Ð’Ð»Ð°Ð´ÐµÐ»ÑŒÑ†ÐµÐ²_Ð¿Ð¾_ÐŸÐ¢Ð¡ BIGINT,
 ID_C BIGINT NOT NULL,
 ID_condition BIGINT NOT NULL,
-ID_ÏÒÑ BIGINT NOT NULL,
+ID_ÐŸÐ¢Ð¡ BIGINT NOT NULL,
 ID_M BIGINT NOT NULL,
-ID_õàðàêòåðèñòèêè BIGINT NOT NULL
+ID_Ñ…Ð°Ñ€Ð°ÐºÑ‚ÐµÑ€Ð¸ÑÑ‚Ð¸ÐºÐ¸ BIGINT NOT NULL
 )
-CREATE TABLE Êëèåíò(
+CREATE TABLE ÐšÐ»Ð¸ÐµÐ½Ñ‚(
 ID_Client BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Ôàìèëèÿ CHAR(100) NOT NULL,
-Èìÿ CHAR(100) NOT NULL,
-Îò÷åñòâî CHAR(100) NOT NULL
+Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ CHAR(100) NOT NULL,
+Ð˜Ð¼Ñ CHAR(100) NOT NULL,
+ÐžÑ‚Ñ‡ÐµÑÑ‚Ð²Ð¾ CHAR(100) NOT NULL
 )
-CREATE TABLE Âèä_îïëàòû(
-ID_Îïëàòû BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Âèä_îïëàòû CHAR(100) NOT NULL
+CREATE TABLE Ð’Ð¸Ð´_Ð¾Ð¿Ð»Ð°Ñ‚Ñ‹(
+ID_ÐžÐ¿Ð»Ð°Ñ‚Ñ‹ BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ð’Ð¸Ð´_Ð¾Ð¿Ð»Ð°Ñ‚Ñ‹ CHAR(100) NOT NULL
 )
-CREATE TABLE Äîãîâîð(
-ID_äîãîâîð  BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Öåíà MONEY NOT NULL,
-Ãàðàíòèÿ BIGINT NOT NULL,
-ÍÄÑ MONEY NOT NULL,
-ID_condition BIGINT NOT NULL FOREIGN KEY REFERENCES Òåõ_ñîñòîÿíèå(ID_condition),
-ID_ÏÒÑ BIGINT NOT NULL FOREIGN KEY REFERENCES ÏÒÑ(ID_ÏÒÑ),
-ID_M BIGINT NOT NULL FOREIGN KEY REFERENCES Ìàðêà_àâòîìîáèëÿ(ID_M),
-ID_Client BIGINT NOT NULL FOREIGN KEY REFERENCES Êëèåíò (ID_Client),
-ID_Îïëàòû BIGINT NOT NULL FOREIGN KEY REFERENCES Âèä_Îïëàòû (ID_Îïëàòû),
-ID_õàðàêòåðèñòèêè BIGINT NOT NULL FOREIGN KEY REFERENCES Òåõ_õàðàêòåðèñòèêè_àâòîìîáèëÿ (ID_õàðàêòåðèñòèêè),
-ID_àâòîìîáèëÿ BIGINT NOT NULL FOREIGN KEY REFERENCES Àâòîìîáèëü (ID_àâòîìîáèëÿ)
+CREATE TABLE Ð”Ð¾Ð³Ð¾Ð²Ð¾Ñ€(
+ID_Ð´Ð¾Ð³Ð¾Ð²Ð¾Ñ€  BIGINT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Ð¦ÐµÐ½Ð° MONEY NOT NULL,
+Ð“Ð°Ñ€Ð°Ð½Ñ‚Ð¸Ñ BIGINT NOT NULL,
+ÐÐ”Ð¡ MONEY NOT NULL,
+ID_condition BIGINT NOT NULL FOREIGN KEY REFERENCES Ð¢ÐµÑ…_ÑÐ¾ÑÑ‚Ð¾ÑÐ½Ð¸Ðµ(ID_condition),
+ID_ÐŸÐ¢Ð¡ BIGINT NOT NULL FOREIGN KEY REFERENCES ÐŸÐ¢Ð¡(ID_ÐŸÐ¢Ð¡),
+ID_M BIGINT NOT NULL FOREIGN KEY REFERENCES ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(ID_M),
+ID_Client BIGINT NOT NULL FOREIGN KEY REFERENCES ÐšÐ»Ð¸ÐµÐ½Ñ‚ (ID_Client),
+ID_ÐžÐ¿Ð»Ð°Ñ‚Ñ‹ BIGINT NOT NULL FOREIGN KEY REFERENCES Ð’Ð¸Ð´_ÐžÐ¿Ð»Ð°Ñ‚Ñ‹ (ID_ÐžÐ¿Ð»Ð°Ñ‚Ñ‹),
+ID_Ñ…Ð°Ñ€Ð°ÐºÑ‚ÐµÑ€Ð¸ÑÑ‚Ð¸ÐºÐ¸ BIGINT NOT NULL FOREIGN KEY REFERENCES Ð¢ÐµÑ…_Ñ…Ð°Ñ€Ð°ÐºÑ‚ÐµÑ€Ð¸ÑÑ‚Ð¸ÐºÐ¸_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ (ID_Ñ…Ð°Ñ€Ð°ÐºÑ‚ÐµÑ€Ð¸ÑÑ‚Ð¸ÐºÐ¸),
+ID_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ BIGINT NOT NULL FOREIGN KEY REFERENCES ÐÐ²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»ÑŒ (ID_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ)
 )
-INSERT INTO Ìàðêà_àâòîìîáèëÿ(ID_M,Ìàðêà) Values(1,'Renault');--Äîáàâëåíèå çàïèñè
-INSERT INTO Ìàðêà_àâòîìîáèëÿ(ID_M,Ìàðêà) Values(2,'Lada');
-INSERT INTO Ìàðêà_àâòîìîáèëÿ(ID_M,Ìàðêà) Values(3,'Mercedes');
-INSERT INTO Ìàðêà_àâòîìîáèëÿ(ID_M,Ìàðêà) Values(4,'BMW');
-SELECT ID_M FROM Ìàðêà_àâòîìîáèëÿ --select
-INSERT INTO Ìàðêà_àâòîìîáèëÿ(ID_M,Ìàðêà) Values(5,'Lada');
-SELECT DISTINCT Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ --distinct
-SELECT Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ ORDER BY  Ìàðêà --order by
-SELECT Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ WHERE ID_M>=1 -- WHERE è áàçîâûå ïðåäèêàòû
-SELECT  Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ WHERE ID_M  IS NULL -- NULL
-SELECT Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ WHERE ID_M BETWEEN 1 AND 5--AND
-SELECT Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ WHERE ID_M > 1 OR ID_M<5 --OR
-SELECT Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ WHERE  Ìàðêà LIKE '%a' --LIKE
-SELECT Ìàðêà FROM Ìàðêà_àâòîìîáèëÿ WHERE ID_M NOT BETWEEN 1 AND 2--NOT
+INSERT INTO ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(ID_M,ÐœÐ°Ñ€ÐºÐ°) Values(1,'Renault');--Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð·Ð°Ð¿Ð¸ÑÐ¸
+INSERT INTO ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(ID_M,ÐœÐ°Ñ€ÐºÐ°) Values(2,'Lada');
+INSERT INTO ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(ID_M,ÐœÐ°Ñ€ÐºÐ°) Values(3,'Mercedes');
+INSERT INTO ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(ID_M,ÐœÐ°Ñ€ÐºÐ°) Values(4,'BMW');
+SELECT ID_M FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ --select
+INSERT INTO ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ(ID_M,ÐœÐ°Ñ€ÐºÐ°) Values(5,'Lada');
+SELECT DISTINCT ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ --distinct
+SELECT ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ ORDER BY  ÐœÐ°Ñ€ÐºÐ° --order by
+SELECT ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ WHERE ID_M>=1 -- WHERE Ð¸ Ð±Ð°Ð·Ð¾Ð²Ñ‹Ðµ Ð¿Ñ€ÐµÐ´Ð¸ÐºÐ°Ñ‚Ñ‹
+SELECT  ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ WHERE ID_M  IS NULL -- NULL
+SELECT ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ WHERE ID_M BETWEEN 1 AND 5--AND
+SELECT ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ WHERE ID_M > 1 OR ID_M<5 --OR
+SELECT ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ WHERE  ÐœÐ°Ñ€ÐºÐ° LIKE '%a' --LIKE
+SELECT ÐœÐ°Ñ€ÐºÐ° FROM ÐœÐ°Ñ€ÐºÐ°_Ð°Ð²Ñ‚Ð¾Ð¼Ð¾Ð±Ð¸Ð»Ñ WHERE ID_M NOT BETWEEN 1 AND 2--NOT
 
 
 
